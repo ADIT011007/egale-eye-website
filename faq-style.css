@@ -36,7 +36,7 @@
 
 /* Add background image to FAQ section */
 .faq {
-    background-image: url('faq-background.jpg'); /* Update the file name and path as needed */
+    background-image: url('https://via.placeholder.com/1500x1000'); /* Placeholder image link */
     background-size: cover;
     background-position: center;
     padding: 50px;
