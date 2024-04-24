@@ -24,3 +24,37 @@
     padding: 20px;
     border-radius: 10px;
 }
+
+/* Animate FAQ items */
+.faq-item {
+    transition: transform 0.3s ease;
+}
+
+.faq-item:hover {
+    transform: scale(1.05);
+}
+
+/* Add background image to FAQ section */
+.faq {
+    background-image: url('faq-background.jpg'); /* Update the file name and path as needed */
+    background-size: cover;
+    background-position: center;
+    padding: 50px;
+    border-radius: 10px;
+}
+
+/* Add animation to FAQ section */
+.faq {
+    animation: fadeInUp 1s ease;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
