@@ -1,0 +1,26 @@
+/* faq-style.css */
+
+/* Increase spacing between FAQ items */
+.faq-item {
+    margin-bottom: 30px;
+}
+
+/* Style question headings */
+.question {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Style answer paragraphs */
+.answer {
+    font-size: 16px;
+    color: #666;
+}
+
+/* Add a border around each FAQ item */
+.faq-item {
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 10px;
+}
