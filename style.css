@@ -1,18 +1,17 @@
-/* Add this to your style.css file */
-
 /* Style the key features section */
 .key-feature {
   margin-bottom: 30px;
   padding: 20px;
   border: 1px solid #ddd;
   border-radius: 10px;
-  transition: transform 0.3s ease;
   background-color: #f9f9f9;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
 }
 
-/* Hover effect for key features */
+/* Individual hover effect for each key feature */
 .key-feature:hover {
   transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 /* Style the top navigation bar */
@@ -37,35 +36,6 @@
   text-decoration: none;
 }
 
-/* Center the main UI image */
-.main-ui img {
-  display: block;
-  max-width: 110%; /* Increase the width to make the image larger */
-  height: auto;
-  margin: 0 auto;
-}
-
-/* Center the settings-dark image */
-.settings-dark img {
-  display: block;
-  margin: 0 auto;
-}
-
-/* Style the intro-item class */
-.intro-item {
-  border: 1px solid #ddd;
-  padding: 10px;
-  margin-bottom: 10px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-}
-
-/* Hover effect for intro-item */
-.intro-item:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-}
-
 /* Change the color of links on hover */
 .top-nav ul li a:hover {
   background-color: #ddd;
@@ -76,6 +46,20 @@
 .top-nav ul li a.active {
   background-color: #4CAF50;
   color: white;
+}
+
+/* Style the main UI image */
+.main-ui img {
+  display: block;
+  max-width: 110%; /* Increase the width to make the image larger */
+  height: auto;
+  margin: 0 auto; /* Center the image horizontally */
+}
+
+/* Individual hover effect for settings images */
+.settings-dark img:hover, .settings-light img:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease; /* Smooth transition for hover effect */
 }
 
 /* Responsive styling for the navigation bar */
