@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Browser Showcase</title>
+    <title>Eagle Eye Browser</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -14,13 +14,13 @@
             max-width: 800px;
             margin: 20px auto;
             padding: 0 20px;
+            text-align: center;
         }
         h1 {
             text-align: center;
         }
         .image-container {
-            text-align: center;
-            margin-top: 50px;
+            display: inline-block;
             opacity: 0;
             transition: opacity 0.5s ease;
         }
@@ -54,12 +54,16 @@
         .button:hover {
             background-color: #0056b3;
         }
+        .scroll-text {
+            font-size: 16px;
+            margin-top: 20px;
+        }
     </style>
 </head>
 <body>
 
 <div class="container">
-    <h1>My Browser Showcase</h1>
+    <h1>Eagle Eye Browser</h1>
 
     <div class="image-container">
         <img src="settings_dark.png" alt="Settings Dark" class="fade-in">
@@ -74,6 +78,8 @@
     <div class="button-container">
         <button class="button" onclick="openFAQ()">FAQ</button>
     </div>
+
+    <div class="scroll-text" id="scrollText">Scroll down for more</div>
 </div>
 
 <script>
@@ -87,6 +93,13 @@
                 image.classList.add('show');
             }
         });
+
+        var scrollText = document.getElementById('scrollText');
+        if (isScrolledPastMainContent()) {
+            scrollText.style.display = 'none';
+        } else {
+            scrollText.style.display = 'block';
+        }
     }
 
     function isElementInViewport(el) {
@@ -97,6 +110,11 @@
             rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
             rect.right <= (window.innerWidth || document.documentElement.clientWidth)
         );
+    }
+
+    function isScrolledPastMainContent() {
+        var mainContent = document.querySelector('.container');
+        return window.scrollY > mainContent.offsetTop + mainContent.offsetHeight;
     }
 
     function openFAQ() {
