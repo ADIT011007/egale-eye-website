@@ -1,3 +1,5 @@
+/* faq-style.css */
+
 /* Increase spacing between FAQ items */
 .faq-item {
     margin-bottom: 30px;
@@ -13,7 +15,7 @@
 /* Style answer paragraphs */
 .answer {
     font-size: 16px;
-    color: #666;
+    color: #000; /* Changed to pitch dark black */
 }
 
 /* Add a border around each FAQ item */
@@ -55,4 +57,26 @@
         opacity: 1;
         transform: translateY(0);
     }
+}
+
+/* Grey strip for navigation */
+.nav-strip {
+    background-color: #d3d3d3; /* Grey color */
+    padding: 10px 0;
+}
+
+/* Navigation button styles */
+.nav-button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-right: 10px;
+    background-color: #f4f4f4;
+    color: #333;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-button:hover {
+    background-color: #e7e7e7;
 }
