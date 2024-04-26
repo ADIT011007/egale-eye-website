@@ -23,12 +23,15 @@
             <h2>Lightweight, Secure, and Open Source Browser</h2>
             <p>Browse the web with confidence knowing that your privacy is protected.</p>
             <a href="#" class="download-button">Download Now</a>
+            <div class="main-ui">
+                <img src="main_ui.png" alt="Main UI">
+            </div>
             <div class="settings-themes">
                 <div class="settings-light">
-                    <img src="settings_white.png" alt="Settings Light Theme">
+                    <img src="settings_light.jpg" alt="Settings Light Theme">
                 </div>
                 <div class="settings-dark">
-                    <img src="settings_dark.png" alt="Settings Dark Theme">
+                    <img src="settings_dark.jpg" alt="Settings Dark Theme">
                 </div>
             </div>
         </section>
@@ -45,6 +48,7 @@
             if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
                 document.querySelector('.settings-light').classList.add('animate-light');
                 document.querySelector('.settings-dark').classList.add('animate-dark');
+                document.querySelector('.main-ui').classList.add('animate-ui');
             }
         }
     </script>
