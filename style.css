@@ -1,18 +1,23 @@
+/* Add this to your style.css file */
+
+/* Style the key features section */
 .key-feature {
-  margin-bottom: 30px; /* Space between items */
-  padding: 20px; /* Padding inside the box */
-  border: 1px solid #ddd; /* Border around the box */
-  border-radius: 10px; /* Rounded corners */
-  transition: transform 0.3s ease; /* Smooth transition for hover effect */
-  background-color: #f9f9f9; /* Background color for each feature */
+  margin-bottom: 30px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+  background-color: #f9f9f9;
 }
 
 /* Hover effect for key features */
 .key-feature:hover {
-  transform: scale(1.05); /* Slightly scale up the box on hover */
+  transform: scale(1.05);
 }
+
+/* Style the top navigation bar */
 .top-nav {
-  background-color: #333; /* Dark background for the top nav */
+  background-color: #333;
   overflow: hidden;
 }
 
@@ -21,48 +26,6 @@
   list-style-type: none;
   margin: 0;
   padding: 0;
-}
-.main-ui img {
-  width: 110%; /* Increase the width to make the image larger */
-  height: auto; /* Adjust the height automatically to maintain aspect ratio */
-  display: block;
-  margin: 0 auto;
-}
-/* Center the settings-dark image */
-.settings-dark img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.top-nav ul li {
-  float: left;
-}
-/* Add this to your style.css file */
-
-/* Base style for settings theme images */
-.settings-themes div {
-  width: 50%; /* Adjust the width as needed */
-  margin: 0 auto; /* Center the divs */
-  transition: transform 0.3s ease; /* Smooth transition for the hover effect */
-}
-
-/* Hover effect for settings theme images */
-.settings-themes div:hover {
-  transform: scale(1.1); /* Scale up the image slightly on hover */
-}
-
-/* Style the main UI image */
-.main-ui img {
-  display: block; /* Use block display to allow margin auto to work */
-  max-width: 100%; /* Make image responsive to screen width */
-  height: auto; /* Keep image aspect ratio */
-  margin: 0 auto; /* Center the image horizontally */
-}
-
-/* Optional: Limit the size of the image */
-.main-ui img {
-  max-width: 600px; /* Adjust this value to fit your design needs */
 }
 
 /* Style the anchor elements */
@@ -73,21 +36,34 @@
   padding: 14px 16px;
   text-decoration: none;
 }
-/* Add this to your style.css file */
+
+/* Center the main UI image */
+.main-ui img {
+  display: block;
+  max-width: 110%; /* Increase the width to make the image larger */
+  height: auto;
+  margin: 0 auto;
+}
+
+/* Center the settings-dark image */
+.settings-dark img {
+  display: block;
+  margin: 0 auto;
+}
 
 /* Style the intro-item class */
 .intro-item {
-  border: 1px solid #ddd; /* Add a border to each box */
-  padding: 10px; /* Add some padding inside the boxes */
-  margin-bottom: 10px; /* Add some space between the boxes */
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
-  box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Add a subtle shadow to each box */
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin-bottom: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 /* Hover effect for intro-item */
 .intro-item:hover {
-  transform: translateY(-5px); /* Move the box up slightly on hover */
-  box-shadow: 0 5px 15px rgba(0,0,0,0.3); /* Enhance the shadow on hover */
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
 /* Change the color of links on hover */
