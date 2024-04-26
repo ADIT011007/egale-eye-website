@@ -1,5 +1,28 @@
 /* faq-style.css */
 
+/* Grey strip for navigation */
+.nav-strip {
+    background-color: #d3d3d3; /* Grey color */
+    padding: 10px 0;
+    text-align: center; /* Center the navigation buttons */
+}
+
+/* Navigation button styles */
+.nav-button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 0 10px; /* Adjusted spacing */
+    background-color: #f4f4f4;
+    color: #333;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-button:hover {
+    background-color: #e7e7e7;
+}
+
 /* Increase spacing between FAQ items */
 .faq-item {
     margin-bottom: 30px;
@@ -23,6 +46,7 @@
     border: 1px solid #ddd;
     padding: 20px;
     border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.8); /* Added for better readability */
 }
 
 /* Animate FAQ items */
@@ -57,26 +81,4 @@
         opacity: 1;
         transform: translateY(0);
     }
-}
-
-/* Grey strip for navigation */
-.nav-strip {
-    background-color: #d3d3d3; /* Grey color */
-    padding: 10px 0;
-}
-
-/* Navigation button styles */
-.nav-button {
-    display: inline-block;
-    padding: 10px 20px;
-    margin-right: 10px;
-    background-color: #f4f4f4;
-    color: #333;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
-
-.nav-button:hover {
-    background-color: #e7e7e7;
 }
