@@ -3,54 +3,106 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eagle Eye Browser</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <header>
-        <h1>Eagle Eye Browser</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="faq.html">FAQ</a></li>
-            </ul>
-        </nav>
-    </header>
-    
-    <main>
-        <section class="hero">
-            <h2>Lightweight, Secure, and Open Source Browser</h2>
-            <p>Browse the web with confidence knowing that your privacy is protected.</p>
-            <a href="#" class="download-button">Download Now</a>
-            <div class="main-ui">
-                <img src="main_ui.png" alt="Main UI">
-            </div>
-            <div class="settings-themes">
-                <div class="settings-light">
-                    <img src="settings_light.png" alt="Settings Light Theme">
-                </div>
-                <div class="settings-dark">
-                    <img src="settings_dark.png" alt="Settings Dark Theme">
-                </div>
-            </div>
-        </section>
-    </main>
-    
-    <footer>
-        <p>&copy; 2024 Eagle Eye Browser</p>
-    </footer>
-
-    <script>
-        window.onscroll = function() {scrollFunction()};
-
-        function scrollFunction() {
-            if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-                document.querySelector('.settings-light').classList.add('animate-light');
-                document.querySelector('.settings-dark').classList.add('animate-dark');
-                document.querySelector('.main-ui').classList.add('animate-ui');
+    <title>My Browser Showcase</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+        h1 {
+            text-align: center;
+        }
+        .image-container {
+            text-align: center;
+            margin-top: 50px;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+        .image-container.show {
+            opacity: 1;
+        }
+        .fade-in {
+            animation: fadeIn 1s ease;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
             }
         }
-    </script>
+        .button-container {
+            text-align: center;
+            margin-top: 30px;
+        }
+        .button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>My Browser Showcase</h1>
+
+    <div class="image-container">
+        <img src="settings_dark.png" alt="Settings Dark" class="fade-in">
+    </div>
+    <div class="image-container">
+        <img src="setting_white.png" alt="Settings White" class="fade-in">
+    </div>
+    <div class="image-container">
+        <img src="main_ui.png" alt="Main UI" class="fade-in">
+    </div>
+
+    <div class="button-container">
+        <button class="button" onclick="openFAQ()">FAQ</button>
+    </div>
+</div>
+
+<script>
+    window.addEventListener('scroll', fadeInImages);
+
+    function fadeInImages() {
+        var images = document.querySelectorAll('.image-container');
+
+        images.forEach(function(image) {
+            if (isElementInViewport(image) && !image.classList.contains('show')) {
+                image.classList.add('show');
+            }
+        });
+    }
+
+    function isElementInViewport(el) {
+        var rect = el.getBoundingClientRect();
+        return (
+            rect.top >= 0 &&
+            rect.left >= 0 &&
+            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+        );
+    }
+
+    function openFAQ() {
+        window.open('faq.html', '_blank');
+    }
+</script>
+
 </body>
 </html>
