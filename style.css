@@ -53,6 +53,31 @@ main {
     font-size: 18px;
     margin-bottom: 30px;
 }
+.top-nav {
+    background-color: #333; /* Example color for the top bar background */
+    padding: 10px 0; /* Adjust padding as needed */
+}
+
+.top-nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.top-nav ul li {
+    display: inline;
+}
+
+.top-nav ul li a {
+    color: white; /* Example color for the links */
+    text-decoration: none;
+    padding: 10px 20px; /* Adjust padding as needed */
+}
+
+.top-nav ul li a:hover {
+    background-color: #555; /* Example color for hover */
+}
 .main-ui img {
     max-width: 100%;
     height: auto;
