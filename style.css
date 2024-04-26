@@ -16,6 +16,20 @@
 .top-nav ul li {
   float: left;
 }
+/* Add this to your style.css file */
+
+/* Base style for settings theme images */
+.settings-themes div {
+  width: 50%; /* Adjust the width as needed */
+  margin: 0 auto; /* Center the divs */
+  transition: transform 0.3s ease; /* Smooth transition for the hover effect */
+}
+
+/* Hover effect for settings theme images */
+.settings-themes div:hover {
+  transform: scale(1.1); /* Scale up the image slightly on hover */
+}
+
 /* Style the main UI image */
 .main-ui img {
   display: block; /* Use block display to allow margin auto to work */
@@ -36,6 +50,22 @@
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
+}
+/* Add this to your style.css file */
+
+/* Style the intro-item class */
+.intro-item {
+  border: 1px solid #ddd; /* Add a border to each box */
+  padding: 10px; /* Add some padding inside the boxes */
+  margin-bottom: 10px; /* Add some space between the boxes */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Add a subtle shadow to each box */
+}
+
+/* Hover effect for intro-item */
+.intro-item:hover {
+  transform: translateY(-5px); /* Move the box up slightly on hover */
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3); /* Enhance the shadow on hover */
 }
 
 /* Change the color of links on hover */
