@@ -23,24 +23,30 @@
             <h2>Lightweight, Secure, and Open Source Browser</h2>
             <p>Browse the web with confidence knowing that your privacy is protected.</p>
             <a href="#" class="download-button">Download Now</a>
-            <a href="faq.html" class="faq-button">Visit FAQ Page</a> <!-- Add this line for FAQ button -->
-        </section>
-        
-        <section class="support">
-            <h3>Get Help and Support</h3>
-            <ul>
-                <li>
-                    <a href="https://discord.gg/JaV44WxT2T" target="_blank">
-                        <img src="https://assets-global.website-files.com/6257adef93867e50d84d30e2/636e0b5061df29d55a92d945_full_logo_blurple_RGB.svg" alt="Discord Logo" width="35">
-                        Discord Server
-                    </a>
-                </li>
-            </ul>
+            <div class="settings-themes">
+                <div class="settings-light">
+                    <img src="settings_light.jpg" alt="Settings Light Theme">
+                </div>
+                <div class="settings-dark">
+                    <img src="settings_dark.jpg" alt="Settings Dark Theme">
+                </div>
+            </div>
         </section>
     </main>
     
     <footer>
         <p>&copy; 2024 Eagle Eye Browser</p>
     </footer>
+
+    <script>
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+                document.querySelector('.settings-light').classList.add('animate-light');
+                document.querySelector('.settings-dark').classList.add('animate-dark');
+            }
+        }
+    </script>
 </body>
 </html>
