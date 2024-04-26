@@ -16,6 +16,18 @@
 .top-nav ul li {
   float: left;
 }
+/* Style the main UI image */
+.main-ui img {
+  display: block; /* Use block display to allow margin auto to work */
+  max-width: 100%; /* Make image responsive to screen width */
+  height: auto; /* Keep image aspect ratio */
+  margin: 0 auto; /* Center the image horizontally */
+}
+
+/* Optional: Limit the size of the image */
+.main-ui img {
+  max-width: 600px; /* Adjust this value to fit your design needs */
+}
 
 /* Style the anchor elements */
 .top-nav ul li a {
