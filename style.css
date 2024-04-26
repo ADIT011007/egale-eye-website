@@ -53,6 +53,10 @@ main {
     font-size: 18px;
     margin-bottom: 30px;
 }
+.main-ui img {
+    max-width: 100%;
+    height: auto;
+}
 
 /* Add styles for settings themes */
 .settings-themes {
