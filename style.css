@@ -1,18 +1,46 @@
-.top-strip {
-    background-color: #f0f0f0; /* Grey background color */
-    padding: 10px; /* Adjust as needed */
+/* Add this to your style.css file */
+
+/* Style the top navigation bar */
+.top-nav {
+  background-color: #333; /* Dark background for the top nav */
+  overflow: hidden;
 }
 
-.top-button {
-    display: inline-block;
-    padding: 8px 16px;
-    margin-right: 10px; /* Adjust spacing between buttons */
-    background-color: #ddd; /* Button background color */
-    color: #333; /* Button text color */
-    text-decoration: none;
-    border-radius: 5px;
+/* Style the links inside the navigation bar */
+.top-nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
-.top-button:hover {
-    background-color: #bbb; /* Button background color on hover */
+.top-nav ul li {
+  float: left;
+}
+
+/* Style the anchor elements */
+.top-nav ul li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change the color of links on hover */
+.top-nav ul li a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Add a color to the active/current link */
+.top-nav ul li a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+/* Responsive styling for the navigation bar */
+@media screen and (max-width: 600px) {
+  .top-nav ul li {
+    float: none;
+  }
 }
