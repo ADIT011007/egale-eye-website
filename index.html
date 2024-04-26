@@ -4,142 +4,55 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eagle Eye Browser</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
-        .container {
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 0 20px;
-            text-align: center;
-        }
-        h1 {
-            text-align: center;
-        }
-        .image-container {
-            display: inline-block;
-            opacity: 0;
-            transition: opacity 0.5s ease;
-            text-align: center;
-            margin-bottom: 20px;
-        }
-        .image-container.show {
-            opacity: 1;
-        }
-        .fade-in {
-            animation: fadeIn 1s ease;
-        }
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-            to {
-                opacity: 1;
-            }
-        }
-        .button-container {
-            text-align: center;
-            margin-top: 30px;
-        }
-        .button {
-            padding: 10px 20px;
-            background-color: #007bff;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-        .button:hover {
-            background-color: #0056b3;
-        }
-        .scroll-text {
-            font-size: 16px;
-            margin-top: 20px;
-        }
-        .top-text {
-            margin-bottom: 20px;
-            font-size: 18px;
-        }
-
-        /* Responsive Design */
-        @media only screen and (max-width: 600px) {
-            .container {
-                padding: 0 10px;
-            }
-            .image-container {
-                width: 100%;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <header>
+        <h1>Eagle Eye Browser</h1>
+        <nav class="top-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="#" class="download-button">Download Now</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section class="hero">
+            <h2>Lightweight, Secure, and Open Source Browser</h2>
+            <p>Browse the web with confidence knowing that your privacy is protected.</p>
+            <a href="#" class="download-button">Download Now</a>
+            <div class="main-ui">
+                <img src="main_ui.png" alt="Main UI">
+            </div>
+            <div class="settings-themes">
+                <div class="settings-light">
+                    <img src="settings_light.jpg" alt="Settings Light Theme">
+                </div>
+                <div class="settings-dark">
+                    <img src="settings_dark.jpg" alt="Settings Dark Theme">
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2024 Eagle Eye Browser</p>
+    </footer>
 
-<div class="container">
-    <div class="top-text">Scroll down to get started</div>
-    <h1>Eagle Eye Browser</h1>
+    <script>
+        window.onscroll = function() {scrollFunction()};
 
-    <div class="image-container">
-        <img src="settings_dark.png" alt="Settings Dark" class="fade-in">
-    </div>
-    <div class="image-container">
-        <img src="settings_white.png" alt="Settings White" class="fade-in">
-    </div>
-    <div class="image-container">
-        <img src="main_ui.png" alt="Main UI" class="fade-in">
-    </div>
-
-    <div class="button-container">
-        <button class="button" onclick="openFAQ()">FAQ</button>
-    </div>
-
-    <div class="scroll-text" id="scrollText">Scroll down for more</div>
-</div>
-
-<script>
-    window.addEventListener('DOMContentLoaded', fadeInImages);
-    window.addEventListener('scroll', fadeInImages);
-
-    function fadeInImages() {
-        var images = document.querySelectorAll('.image-container');
-
-        images.forEach(function(image) {
-            if (isElementInViewport(image) && !image.classList.contains('show')) {
-                image.classList.add('show');
+        function scrollFunction() {
+            if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+                document.querySelector('.settings-light').classList.add('animate-light');
+                document.querySelector('.settings-dark').classList.add('animate-dark');
+                document.querySelector('.main-ui').classList.add('animate-ui');
             }
-        });
-
-        var scrollText = document.getElementById('scrollText');
-        if (isScrolledPastMainContent()) {
-            scrollText.style.display = 'none';
-        } else {
-            scrollText.style.display = 'block';
         }
-    }
-
-    function isElementInViewport(el) {
-        var rect = el.getBoundingClientRect();
-        return (
-            rect.top >= 0 &&
-            rect.left >= 0 &&
-            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-        );
-    }
-
-    function isScrolledPastMainContent() {
-        var mainContent = document.querySelector('.container');
-        return window.scrollY > mainContent.offsetTop + mainContent.offsetHeight;
-    }
-
-    function openFAQ() {
-        window.open('faq.html', '_blank');
-    }
-</script>
-
+    </script>
 </body>
 </html>
