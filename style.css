@@ -64,6 +64,19 @@ main {
     transition: background-color 0.3s;
 }
 
+.support a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #333;
+}
+
+.support a img {
+    width: 32px;
+    height: 32px;
+    margin-right: 10px;
+}
+
 .download-button:hover {
     background-color: #0056b3;
 }
