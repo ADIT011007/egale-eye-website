@@ -54,6 +54,29 @@ main {
     margin-bottom: 30px;
 }
 
+/* Add styles for settings themes */
+.settings-themes {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+    opacity: 0;
+}
+
+.settings-themes img {
+    max-width: 300px;
+    transition: transform 1s ease, opacity 1s ease;
+}
+
+.animate-light {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.animate-dark {
+    transform: translateY(0);
+    opacity: 1;
+}
+
 .download-button {
     display: inline-block;
     padding: 15px 30px;
