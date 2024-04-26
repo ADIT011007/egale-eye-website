@@ -71,6 +71,10 @@ main {
     transform: translateY(0);
     opacity: 1;
 }
+.animate-ui{
+    transform: translateY(0(;
+    opacity: 1;
+}    
 
 .animate-dark {
     transform: translateY(0);
