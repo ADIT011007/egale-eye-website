@@ -1,6 +1,16 @@
-/* Add this to your style.css file */
+.key-feature {
+  margin-bottom: 30px; /* Space between items */
+  padding: 20px; /* Padding inside the box */
+  border: 1px solid #ddd; /* Border around the box */
+  border-radius: 10px; /* Rounded corners */
+  transition: transform 0.3s ease; /* Smooth transition for hover effect */
+  background-color: #f9f9f9; /* Background color for each feature */
+}
 
-/* Style the top navigation bar */
+/* Hover effect for key features */
+.key-feature:hover {
+  transform: scale(1.05); /* Slightly scale up the box on hover */
+}
 .top-nav {
   background-color: #333; /* Dark background for the top nav */
   overflow: hidden;
