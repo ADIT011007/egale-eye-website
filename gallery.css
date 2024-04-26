@@ -4,11 +4,28 @@ body, html {
     height: 100%;
     margin: 0;
     font-family: Arial, sans-serif;
+    overflow-x: hidden; /* Prevent horizontal scroll */
 }
+
 .image-container {
     position: relative;
-    height: 50vh; /* Adjusted height to fit the screen better */
+    height: 100vh; /* Full height of the viewport */
     background-position: center;
     background-repeat: no-repeat;
-    background-size: contain; /* Changed from 'cover' to 'contain' to fit the image */
+    background-size: contain; /* Fit the image within the container */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#main-ui {
+    background-image: url('main_ui.png');
+}
+
+#settings-dark {
+    background-image: url('settings_dark.png');
+}
+
+#settings-white {
+    background-image: url('settings_white.png');
 }
