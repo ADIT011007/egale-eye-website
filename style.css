@@ -1,19 +1,18 @@
-/* Style intro paragraphs */
-.intro-item p {
-    font-size: 16px;
-    color: #666;
+.top-strip {
+    background-color: #f0f0f0; /* Grey background color */
+    padding: 10px; /* Adjust as needed */
 }
 
-/* Add a border around each intro item */
-.intro-item {
-    border: 1px solid #ddd;
-    padding: 20px;
-    border-radius: 10px;
-    margin-bottom: 30px; /* Increase spacing between intro items */
-    transition: transform 0.3s ease; /* Animate intro items */
+.top-button {
+    display: inline-block;
+    padding: 8px 16px;
+    margin-right: 10px; /* Adjust spacing between buttons */
+    background-color: #ddd; /* Button background color */
+    color: #333; /* Button text color */
+    text-decoration: none;
+    border-radius: 5px;
 }
 
-/* Animate intro items on hover */
-.intro-item:hover {
-    transform: scale(1.05);
+.top-button:hover {
+    background-color: #bbb; /* Button background color on hover */
 }
