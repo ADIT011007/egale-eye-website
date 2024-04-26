@@ -7,17 +7,8 @@ body, html {
 }
 .image-container {
     position: relative;
-    height: 100vh;
+    height: 50vh; /* Adjusted height to fit the screen better */
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
-}
-.image-container:nth-child(1) {
-    background-image: url('main_ui.png');
-}
-.image-container:nth-child(2) {
-    background-image: url('settings_dark.png');
-}
-.image-container:nth-child(3) {
-    background-image: url('settings_white.png');
+    background-size: contain; /* Changed from 'cover' to 'contain' to fit the image */
 }
